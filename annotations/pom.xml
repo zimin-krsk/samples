@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>samples</artifactId>
+        <groupId>ru.print-stack-trace</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>annotations</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <javax.annotation.jsr305.version>3.0.2</javax.annotation.jsr305.version>
+    </properties>
+
+    <dependencies>
+        <!-- Before Java 9 javax.annotation is gold middle of all similar decision, -->
+        <!-- but above Java 9 version it have a some problem, because locate in same -->
+        <!-- package that a some "service" classes -->
+        <dependency>
+            <groupId>com.google.code.findbugs</groupId>
+            <artifactId>jsr305</artifactId>
+            <version>${javax.annotation.jsr305.version}</version>
+        </dependency>
+    </dependencies>
+</project>
